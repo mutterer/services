@@ -27,12 +27,12 @@ selectImage(id);
 close("\\Others");
 roiManager("Show All");
 roiManager("Measure");
-saveAs("results",getTitle+".csv");
+saveAs("results","/files/"+getTitle+".csv");
 }
 
 function setup() {
 print ("--MEASURE LEAVES FROM FLATBED SCANNER IMAGES--");
-print ("Version 1.02");
+print ("Version 1.03");
 print ("Drag and drop image on the canvas.");
 print ("Press the 'play' tool icon to measure leaves.");
 print ("-----------------------------------------------");
