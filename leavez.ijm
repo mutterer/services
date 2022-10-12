@@ -22,10 +22,11 @@ run("Multiply...", "value=-2.000 slice");
 run("Z Project...", "projection=[Sum Slices]");
 setAutoThreshold("Default dark no-reset");
 run("Set Measurements...", "area centroid perimeter bounding shape feret's display redirect=None decimal=3");
-run("Analyze Particles...", "size=100-Infinity pixel display exclude clear add");
+run("Analyze Particles...", "size=100-Infinity pixel exclude clear add");
 selectImage(id);
 close("\\Others");
 roiManager("Show All");
+roiManager("Measure");
 }
 
 function setup() {
