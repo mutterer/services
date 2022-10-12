@@ -16,6 +16,7 @@ macro "leavEZ Action Tool - C0f0H000ff800C000G000ff800" {
     } else {
         exit("Probably not a flatbed scanner image!");
     }
+run("ROI Manager...");
 setBatchMode(1);
 id=getImageID;
 run("Duplicate...", "title=stack");
