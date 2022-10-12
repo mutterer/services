@@ -27,6 +27,7 @@ selectImage(id);
 close("\\Others");
 roiManager("Show All");
 roiManager("Measure");
+selectWindow("Results");
 saveAs("results","/files/"+getTitle+".csv");
 }
 
