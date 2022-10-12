@@ -1,3 +1,8 @@
+/*
+a ImageJ.js workflow for measuring leaves
+Jerome Mutterer / 20221012
+*/
+
 var x=setup();
 
 macro "leavEZ Action Tool - C0f0H000ff800C000G000ff800" {
@@ -27,13 +32,14 @@ selectImage(id);
 close("\\Others");
 roiManager("Show All");
 roiManager("Measure");
-selectWindow("Results");
-saveAs("results","/files/"+getTitle+".csv");
+// auto saving doesn't work for now
+// selectWindow("Results");
+// saveAs("results","/files/"+getTitle+".csv");
 }
 
 function setup() {
 print ("--MEASURE LEAVES FROM FLATBED SCANNER IMAGES--");
-print ("Version 1.03");
+print ("Version 1.04");
 print ("Drag and drop image on the canvas.");
 print ("Press the 'play' tool icon to measure leaves.");
 print ("-----------------------------------------------");
