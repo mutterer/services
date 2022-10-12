@@ -29,6 +29,7 @@ roiManager("Show All");
 
 function setup() {
 print ("-------------------------------------");
+print ("Version 1.02");
 print ("Drag and drop image on the canvas.");
 print ("Press the 'play' tool icon to measure leaves.");
 print ("-------------------------------------");
