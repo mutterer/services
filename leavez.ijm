@@ -7,6 +7,7 @@ macro "leavEZ Action Tool - C0f0H000ff800C000G000ff800" {
         height=height*25.4;
         depth=depth*25.4;
         unit = "mm";
+        setVoxelSize(width, height, depth, unit);
     } else {
         exit("Probably not a flatbed scanner image!");
     }
