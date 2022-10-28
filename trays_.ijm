@@ -75,7 +75,7 @@ roiManager("Measure");
 
 function setup() {
 print ("--MEASURE PLANTS FROM TRAY IMAGE--");
-print ("Version 1.02");
+print ("Version 1.03");
 print ("Drag and drop image on the canvas.");
 print ("Press the 'play' tool icon to measure plants.");
 print ("-----------------------------------------------");
