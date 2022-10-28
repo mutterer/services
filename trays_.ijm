@@ -33,7 +33,7 @@ run("Multiply...", "value=-2.000 slice");
 run("Z Project...", "projection=[Sum Slices]");
 run("Set Measurements...", "area centroid perimeter bounding display redirect=None decimal=3");
 // setAutoThreshold("Li dark"); // Li fails when plants too small
-setMinAndMax(-205, 239);
+setThreshold(80, 1.0000E30);
 setOption("BlackBackground", true);
 run("Convert to Mask");
 
