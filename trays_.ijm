@@ -14,11 +14,13 @@ Dialog.create("Parameters");
 Dialog.addNumber("Number_of_columns", 4);
 Dialog.addNumber("Number_of_rows", 6);
 Dialog.addNumber("Width in cm", 40);
+Dialog.addNumber("Magic number", 30);
 Dialog.show();
 getSelectionBounds(x, y, width, height);
 nx=Dialog.getNumber();
 ny=Dialog.getNumber();;
 dist=Dialog.getNumber();
+magic=Dialog.getNumber();
 run("Set Scale...", "distance=&width known=&dist pixel=1 unit=cm");
 roiManager('reset');
 setBatchMode(1);
@@ -33,7 +35,7 @@ run("Multiply...", "value=-2.000 slice");
 run("Z Project...", "projection=[Sum Slices]");
 run("Set Measurements...", "area centroid perimeter bounding display redirect=None decimal=3");
 // setAutoThreshold("Li dark"); // Li fails when plants too small
-setThreshold(80, 1.0000E30);
+setThreshold(magic, 1.0000E30);
 setOption("BlackBackground", true);
 run("Convert to Mask");
 
@@ -75,7 +77,7 @@ roiManager("Measure");
 
 function setup() {
 print ("--MEASURE PLANTS FROM TRAY IMAGE--");
-print ("Version 1.03");
+print ("Version 1.04");
 print ("Drag and drop image on the canvas.");
 print ("Press the 'play' tool icon to measure plants.");
 print ("-----------------------------------------------");
